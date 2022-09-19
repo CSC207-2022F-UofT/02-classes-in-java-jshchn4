@@ -80,7 +80,7 @@ public class Silly implements Comparable<Silly>{
      *       Make sure you document this method!
      */
     public Silly(String first_string, String second_string) {
-        this.name = first_string + " " + second_string;
+        this.name = first_string + second_string;
 
     }
 
@@ -115,13 +115,13 @@ public class Silly implements Comparable<Silly>{
          *                Fill out the expected_values array with the
          *                values that countStatic will return at each call.
          */
-        int a = x.countStatic();
-        int b = y.countStatic();
-        int c = x.countStatic();
-        int d = x.countStatic();
-        int[] expected_values = {a, b, c, d};
+        x.countStatic();
+        y.countStatic();
+        x.countStatic();
+        x.countStatic();
+        int[] expected_values = {0, 1, 2, 3};
 
-        System.out.println("The countStatic cals will return " + Arrays.toString(expected_values));
+        System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
 
     /**
